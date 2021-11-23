@@ -115,23 +115,28 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /opt/ros/kinetic/setup.bash
-source /home/ubuntu/catkin_ws/devel/setup.bash
-source /etc/ubiquity/env.sh
+
 export ROS_PARALLEL_JOBS=-j1 # Limit the number of compile threads due to memory limits
 
 # Aliases 
-# mounting
-alias mnt='sudo mount.cifs -o username=aarykieu@gmail.com //192.168.0.34/linux_shared ~/Desktop/windows_shared'
-
 
 # directories
 alias desktop='cd ~/Desktop/'
 alias home='cd ~'
 
 # ros-related
+source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/catkin_ws/devel/setup.bash
-alias syncdown='sudo cp -r  ~/Desktop/windows_shared/scripts ~/catkin_ws/src/robot_car/'
 alias catkin_ws='cd ~/catkin_ws'
-alias scripts='cd ~/catkin_ws/src/robot_car/scripts/'
+
+
+# Raspberry Pi
+# robot_car ros package
+# alias scripts='cd ~/catkin_ws/src/robot_car/scripts/'
+# source /etc/ubiquity/env.sh
+
+# mounting
+# alias mnt='sudo mount.cifs -o username=aarykieu@gmail.com //192.168.0.34/linux_shared ~/Desktop/windows_shared'
+# alias syncdown='sudo cp -r  ~/Desktop/windows_shared/scripts ~/catkin_ws/src/robot_car/'
+
 
