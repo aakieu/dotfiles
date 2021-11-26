@@ -1,3 +1,21 @@
+# colors
+orange=$(tput setaf 166);
+yellow=$(tput setaf 28);
+green=$(tput setaf 71);
+white=$(tput setaf 15);
+bold=$(tput setaf bold);
+reset=$(tput sgr0);
+
+PS1="\[${bold}\]\n";
+PS1+="\[${orange}\]\u"; # username
+PS1+="\[${white}\] at "; # host
+PS1+="\[${yellow}\]\h";
+PS1+="\[${white}\] in ";
+PS1+="\[${green}\]\w : "; # working directory
+#PS1+="\n";
+PS1+="\[${white}\]\$ \[${reset}\]";  #'$' (and color reset)
+export PS1;
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -118,16 +136,24 @@ fi
 
 export ROS_PARALLEL_JOBS=-j1 # Limit the number of compile threads due to memory limits
 
+#----------------------------------------------------------------------------------------
 # Aliases 
 
 # directories
 alias desktop='cd ~/Desktop/'
 alias home='cd ~'
 
-# ros-related
+# ROS-related
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ~/catkin_ws/devel/setup.bash
 alias catkin_ws='cd ~/catkin_ws'
+
+# gazebo
+export TURTLEBOT3_MODEL='burger'
+
+# Elementary OS
+
+
 
 
 # Raspberry Pi
