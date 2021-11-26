@@ -143,6 +143,7 @@ export ROS_PARALLEL_JOBS=-j1 # Limit the number of compile threads due to memory
 alias desktop='cd ~/Desktop/'
 alias home='cd ~'
 alias bashrc='gedit ~/.bashrc'
+alias sourcebashrc='source ~/.bashrc'
 
 # ROS-related
 source /opt/ros/$ROS_DISTRO/setup.bash
