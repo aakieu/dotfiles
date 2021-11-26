@@ -164,6 +164,6 @@ export TURTLEBOT3_MODEL='burger'
 
 # mounting
 # alias mnt='sudo mount.cifs -o username=aarykieu@gmail.com //192.168.0.34/linux_shared ~/Desktop/windows_shared'
-# alias syncdown='sudo cp -r  ~/Desktop/windows_shared/scripts ~/catkin_ws/src/robot_car/'
+# alias syncdown='sudo cp -a  ~/Desktop/windows_shared/. ~/catkin_ws/src/robot_car/'
 
 
